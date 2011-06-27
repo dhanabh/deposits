@@ -1,0 +1,51 @@
+
+<%= error_messages_for 'fdr' %>
+
+<% form_for @fdr  do |f| %>
+<p>Bank <br />
+
+<%= collection_select("fdr", :bank_id, @b , "id",:name , :prompt => true)%>
+
+</p>
+<p>Select Holders:<br />
+
+<%  for holder in @h %>
+         <%= check_box_tag "fdr[holder_ids][]", "#{holder.id}",@fdr.holders.include?(holder) %> 
+         <%= "#{holder.full_name}" -%>
+
+
+
+
+<% end %>
+</p>
+<p>
+Receipt No:<br />
+<%= f.text_field :r_no%>
+</p>
+
+<p>
+Amount <br />
+<%= f.text_field :amount %>
+</p>
+<p>
+<p>
+Start Date:<br />
+<%= f.text_field :s_date %>
+
+</p>
+<p>
+Date of Maturity<br />
+<%= f.text_field :m_date %>
+</p>
+Maturity Amount:<br />
+<%= f.text_field :m_amount %>
+
+</p>
+
+
+
+<p>
+<%= submit_tag %>
+</p>
+<% end %>
+

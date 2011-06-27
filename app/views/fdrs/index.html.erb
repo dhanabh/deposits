@@ -1,0 +1,35 @@
+<h1> <center>Record of Fixed Deposit Receipts</center></h1><hr>
+<table border=1px>
+<tr>
+<th>Receipt No.</th>
+<th>Start_date</th>
+<th>Amount</th>
+<th>Mat_Amt.</th>
+<th>Holders</th>
+<th>Bank</th>
+
+<th>Mat_Date</th>
+</tr>
+<% for fdr in @fdrs %>
+<tr>
+<td><%= fdr.r_no %>
+<td><%= fdr.s_date %></td>
+<td><%= fdr.amount %></td>
+<td><%= fdr.m_amount %></td>
+<td><% for z in fdr.holders %>
+<%= z[:f_name] + z[:l_name] %>,
+<% end %>
+
+</td>
+
+<td>
+<%=h fdr.bank.name  %>
+
+</td>
+
+<td><%= fdr.m_date %></td>
+
+<td><%= link_to 'delete', destroy_path(fdr),:confirm => 'Are you sure?' %></td>
+</tr>
+<% end  %>
+i</table>

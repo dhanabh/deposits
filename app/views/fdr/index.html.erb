@@ -1,0 +1,14 @@
+<table>
+<tr><th>Amount</th><th>Maturity Amt.</th><th>Holders</th><th>Bank</th><th><Start Date</th><th>Maturity Date</th></tr>
+<%= for fdr in @fdrs %>
+<tr>
+<td><%= fdr.amount %></td>
+<td><%= fdr.m_amount %></td>
+<td><%= fdr.holders.f_name +' '+ fdr.holders.l_name  %></td>
+<td><%= fdr.bank %></td>
+<td><%= fdr.s_date %></td>
+<td><%= fdr.m_date %></td>
+</tr>
+<% end  %>
+
+</table>

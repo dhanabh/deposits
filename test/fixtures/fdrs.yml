@@ -1,0 +1,33 @@
+# == Schema Information
+# Schema version: 20110620132445
+#
+# Table name: fdrs
+#
+#  id         :integer(4)      not null, primary key
+#  amount     :decimal(10, 2)  default(0.0)
+#  m_amount   :decimal(10, 2)  default(0.0)
+#  s_date     :date
+#  m_date     :date
+#  r_no       :string(255)
+#  bank_id    :integer(10)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  amount: 9.99
+  m_amount: 9.99
+  s_date: 2011-06-20
+  m_date: 2011-06-20
+  r_no: MyString
+  bank_id: 9.99
+
+two:
+  amount: 9.99
+  m_amount: 9.99
+  s_date: 2011-06-20
+  m_date: 2011-06-20
+  r_no: MyString
+  bank_id: 9.99

@@ -1,0 +1,11 @@
+
+
+qa:
+  domain: "dhanabh@ssh.alwaysdata.com"
+  deploy_to: "/home/dhanabh/test"
+  repository: "ssh://dhanabh@ssh.alwaysdata.com/~/git/monsite.git"
+  rake_env:
+    RAILS_ENV: 'production'
+
+
+
